@@ -16,7 +16,7 @@ export default class EventDispatcher implements EventDispatcherInterface {
             return;
         }
         this.eventHandlers[eventName].forEach((eventHandler) => {
-            eventHandler.handle();
+            eventHandler.handle(event)
         })
 
     }
